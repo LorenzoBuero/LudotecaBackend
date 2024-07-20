@@ -1,0 +1,96 @@
+{%extends 'core/base.html'%}
+{%block title%} algo | Reseañas {%endblock%} 
+
+{%load static%}
+
+{%block estilos%}
+<link rel="stylesheet" href= "{% static 'core/styles/estiloResenias.css' %}">
+{%endblock%}
+
+{%block content%}
+
+<main class="main">
+    <article class="article">
+      
+      <h1>{{resenia.titulo}}</h1>
+
+      <section class="article-text">
+        
+      <h2>{{resenia.subtitulo_1}}</h2>
+        <p>
+          {{resenia.parrafo_1}} 
+        </p>
+      </section>
+
+      <div class="contenedorImg">
+        <img src="{{resenia.imagen_1.url}}" alt="Imagen 1 del juego" >
+        <img src="{{resenia.imagen_2.url}}" alt="Imagen 2 del juego" >
+      </div>
+
+      <section class="article-text">
+        <h2>{{resenia.subtitulo_2}}</h2>
+        
+        <p>
+          {{resenia.parrafo_2}}
+        </p>
+      </section>
+
+      <section class="article-end">
+        <h3>Síntesis: </h3>
+        <div class="sintesis">
+          <p>
+            {{resenia.sintesis}}
+          </p>
+        </div>
+
+        <div class="score">
+          <h4>Nota Final:</h4>
+          <span>{{resenia.nota}}</span>
+        </div>
+      </section>
+
+
+      
+    </article>
+
+    
+
+    <aside class="game-info">
+      <h3>Información del juego</h3>
+
+      <ul>
+        <li>Géneros: {{resenia.aside_generos}}</li>
+        <li>Plataformas: {{resenia.aside_plataformas}}</li>
+        <li>Creador: {{resenia.aside_creador}}</li>
+        <li>País de origen: {{resenia.aside_pais_origen}}</li>
+      </ul>
+
+      <p>
+        {{resenia.aside_dato_curioso}}
+      </p>
+    </aside>
+
+    
+    <!--
+    <section id="reseñasSimilares">
+      <h3 class="tituloSeccion">Reseñas más buscadas</h3>
+          
+      <div class="reseñas">
+
+          <div class="card-reseña">
+            <h3>{}</h3>
+            <div class="card-reseña-img" style="background-image: url{}"></div> 
+            <p>{}</p>
+            <a href="{}" class="card-reseña-link">Seguir leyendo</a>
+          </div>
+      
+      </div>
+  </section>-->
+  </main>
+
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,72 @@
+main{  
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 100;
+    grid-template-rows: 2;
+    gap: 1%;
+}
+
+
+
+.divTitulos h1{
+    font-size: 4em;
+    color: var(--naranja);
+}
+
+.divTitulos h2{
+    font-size: 1.7em;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divTitulos {
+    width: 45%
+}
+
+
+
+
+
+#imagenDerecha {
+    margin: 80px 0 50px 0;
+    width: 50%;
+}
+
+.article-text {
+    margin: 50px 0;
+}
+
+.article-text h3 {
+    font-size: 1.3em;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.article-text p {
+    margin: 0;
+    text-indent: 0;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.reseñas
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 3%;
+    gap: 2%;
+    justify-content: space-around;
+}
+
+#reseñasMasBuscadas h3
+{
+    font-size: 1.7em;
+
+}

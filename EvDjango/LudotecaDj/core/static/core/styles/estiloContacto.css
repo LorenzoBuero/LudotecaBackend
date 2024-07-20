@@ -1,0 +1,197 @@
+
+/* MAIN */
+#mainContacto {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 25px 10px 25px;
+}
+
+
+/*-------------------------- FORMULARIO --------------------------*/
+
+#contenedorFormContacto { width: 43% }
+
+#contenedorFormContacto p { color: var(--negro-verdoso) } /* Selecciona todos los <p> dentro de contenedorFormContacto */
+
+#contenedorFormContacto > p { margin-bottom: 15px } /* Selecciona el <p> que se encuentra debajo del <h1> */
+
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+/* Todos los inputs del formulario */
+form input, form textarea, form select {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--rosita);
+  padding: 10px;
+}
+
+
+/* Input de tipo file */
+form input[type="file"] { padding: 0 10px }  /* Le quitamos el padding top/bottom para que no rompa la estructura de su contenedor */
+
+
+/* Inputs nombre y apellido */
+#nombre, #apellido { width: 49% }
+
+
+/* Inputs edad y correo */
+#edad{ width: 24% }
+#correo { width: 74% }
+
+
+/* Inputs edad y foto */
+#ubicacion { width: 31% }
+#file-input {
+  width: 67%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 15px;
+  background-color: var(--rosita);
+  padding: 10px;
+}
+
+/* Agregamos espacio entre los inputs */
+#mainContacto input, #mainContacto select, #mainContacto textarea, #mainContacto #file-input { margin-bottom: 15px }
+
+/* Evitamos que ese espacio se aplique dentro del input file, y en el checkbox */
+#mainContacto input[type="file"], #mainContacto input[type="checkbox"] { margin-bottom: 0 }
+
+/* Textarea */
+#comentarios { width: 100% }
+
+/* Contenedor del checkbox aceptar términos */
+#terminosContenedor {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--rosita);
+  margin-bottom: 15px;
+}
+
+/* Link a términos y condiciones */
+#terminosContenedor a {
+  color: var(--naranja);
+  text-decoration: none;
+}
+
+/* Checkbox aceptar términos */
+#terminosContenedor input {
+  border-radius: 5px;
+  background-color: var(--naranja);
+  margin-left: 10px;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Checkbox aceptar términos cuando está seleccionado */
+#terminosContenedor input:checked { background-color: var(--verde-fuerte) }
+
+/* Botón Enviar */
+input[type="submit"] {
+  font-weight: bold;
+  background-color: var(--verde-fuerte);
+  color: var(--negro-verdoso);
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: auto;
+}
+
+/* Botón enviar cuando se le hace hover */
+input[type="submit"]:hover {
+  background-color: var(--naranja);
+  transition: all 250ms;
+}
+
+/*----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*---------------------------- ASIDE -----------------------------*/
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  width: 43%;
+  background-color: var(--naranja);
+  border-radius: 25px;
+  padding: 30px;
+}
+
+/* Título */
+aside h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Links */
+aside a {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--blanco);
+  color: var(--negro-verdoso);
+  margin-bottom: 15px;
+}
+
+/* Links cuando se les hace hover */
+aside a:hover { 
+  background-color: var(--verde-fuerte);
+  transition: all 250ms;
+}
+
+/* Íconos de los links */
+aside a i { margin: 0 15px }
+
+/*----------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------- MEDIA QUERIES --------------------------*/
+
+/* Tamaño tablet */
+@media screen and (max-width: 1330px) and (min-width: 901px) {
+  aside a { width: 300px }
+}
+
+/* Tamaño celular */
+@media screen and (max-width: 900px) {
+  .buscador { display: none }
+
+  #mainContacto { flex-direction: column }
+
+  #contenedorFormContacto { width: 100% }
+
+  aside {
+    width: 100%;
+    margin: 50px 0;
+  }
+}
+
+/*----------------------------------------------------------------*/
+
+
+

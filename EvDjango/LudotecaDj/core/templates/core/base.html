@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+        <!--COSAS DE AFUERA-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" >
+        <!-- ICONOS FONT-AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <!--COSAS DE ACÁ ADENTRO-->
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'core/styles/estiloGeneral.css' %}" >
+        <link rel="icon" href="{% static 'core/images/Ludoteca_Icono/Ludoteca-Icono.ico'%}" type="image/x-icon">
+        {%block estilos%} {%endblock%}
+
+        <title>{% block title %} {% endblock %}| Ludotea</title>
+        
+
+                
+    </head>
+
+
+
+<!--HACER PARA BACKEND:
+
+-ARREGLAR CSS
+
+-->
+
+    <body>
+        <nav class="nav">
+            <a href="{% url 'index'%}" class="nav-logo-titulo"><i class="fa-solid fa-gamepad logo"></i>Ludoteca</a>
+      
+            <ul>
+                <li><a href="{% url 'buscador-resenias' %}" class="btnGenerico">Reseñas</a></li>
+                <li><a href="{% url 'sobre-nosotros' %}" class="btnGenerico">Nosotros</a></li>
+                <li><a href="{% url 'contacto' %}" class="btnGenerico">Contacto</a></li>
+            </ul>  
+      
+            <form class="buscador">
+                <input class="input-search" type="text" placeholder="Buscar reseña..." id="buscar" name="reseña">
+                <button class="button-submit" type="submit" value="Buscar">Buscar</button>
+            </form>       
+        </nav> 
+    
+
+    
+        {%block content%} 
+        
+        
+        {%endblock%}
+
+            
+
+        <footer>
+            <nav id="navegacionFooter">
+                <p>&copy; 2024 <a href="{% url 'index'%}">Ludoteca</a>~ Todos los derechos reservados.</p>
+             
+                <ul>
+                    <li>
+                        <a href="#" target="_blank"> <i class="fas fa-envelope"></i> </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank"> <i class="fab fa-twitter"></i> </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank"> <i class="fab fa-telegram"></i> </a>
+                    </li>
+                </ul>
+
+                <a href="#">Términos y condiciones</a>
+            </nav>
+
+            <a href="#" id="flechaSubir"> <i class="fa-solid fa-circle-chevron-up"></i> </a>
+
+        </footer>
+
+        <script src="https://kit.fontawesome.com/80d7ac3803.js" crossorigin="anonymous"></script>
+    </body>
+</html>

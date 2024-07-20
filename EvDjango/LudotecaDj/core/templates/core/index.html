@@ -1,0 +1,89 @@
+
+{% extends "core/base.html" %}
+
+{% block title %} Bienvenido {% endblock %}
+
+{% load static%}
+
+
+
+{% block estilos%}
+<link rel="stylesheet" href="{% static 'core/styles/estiloIndex.css' %}">
+{%endblock%}
+
+
+{% block content %}
+<main class="main">
+    <article id="article">
+        <div class="encabezado">
+            <div class="divTitulos">
+                <h1>Ludoteca</h1>
+                <h2>Valoramos los juegos con objetividad</h2>
+                <p>Bienvenido! En este sitio encontrarás reseñas objetivas y detalladas de videojuegos, 
+                    tanto de los últimos lanzamientos como de los clásicos más queridos. Nuestro objetivo 
+                    es proporcionarte análisis profundos e imparciales basados en la originalidad, el impacto 
+                    y la calidad general de cada juego. Explorá nuestras secciones y descubrí todo lo que 
+                    necesitas saber para disfrutar al máximo de tus juegos favoritos.</p>
+            </div>
+            <img id="imagenDerecha" src="{% static 'core/images/imagenes_Index/Videojuegos-Index.jpeg'%}" alt="Imagen de varios personajes de videojuegos">
+        </div>
+
+        <hr>
+
+        <section class="article-text">
+            <h3>¿Qué es Ludoteca?</h3>
+            <p>
+                Ludoteca es el lugar perfecto para los amantes de los videojuegos que buscan opiniones sinceras 
+                y certeras. Nos dedicamos a evaluar juegos basándonos en su originalidad, el impacto que causan 
+                y su calidad general. En este sitio podrás descubrir qué hace único a cada juego y por qué merece 
+                tu atención, permitiéndote elegir con mejor criterio cuál será tu próxima experiencia gamer.
+            </p>
+        </section>
+
+        <section class="article-text">
+            <h3>¿Por qué es tan importante valorar los juegos objetivamente?</h3>
+            <p>
+                Valorar los juegos de manera objetiva es crucial, principalmente porque muchos sitios de 
+                reseñas reciben juegos gratuitos de las compañías desarrolladoras a cambio de ofrecerles 
+                valoraciones favorables, lo que puede distorsionar la percepción pública sobre la verdadera 
+                calidad de los juegos.
+                <br><br>
+                En Ludoteca, creemos en la transparencia y la honestidad. Nos esforzamos por ofrecerte 
+                evaluaciones imparciales que te ayuden a tomar decisiones informadas sobre qué juegos se 
+                ajustan mejor a tus intereses, y creemos que cada jugador merece saber exactamente qué esperar 
+                de un juego antes de invertir su tiempo y dinero en él.
+            </p>
+        </section>
+
+        <section class="article-text">
+            <h3>¿Por qué valoramos los juegos por su originalidad e impacto?</h3>
+            <p>
+                Valoramos los juegos teniendo en cuenta su originalidad y su impacto en la industria 
+                porque esto nos brinda una perspectiva más amplia sobre su evolución. Nos permite comprender
+                    por qué algunos juegos trascienden el tiempo y se convierten en clásicos mientras otros caen 
+                    en el olvido. En Ludoteca, apreciamos cómo la innovación y la creatividad pueden transformar 
+                    la experiencia de juego, y reconocemos que incluso un juego lanzado hace décadas puede seguir 
+                    siendo relevante y apreciado por su influencia duradera en la cultura gamer. Nuestra misión es 
+                    celebrar tanto los éxitos contemporáneos como los hitos históricos, ofreciendo análisis en 
+                    profundidad que te ayuden a descubrir nuevas perspectivas sobre tus juegos favoritos.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="reseñasMasBuscadas">
+            <!--<h3 class="tituloSeccion" style="margin: 0">Reseñas más buscadas</h3>-->
+                
+            <div class="reseñas">
+                    
+                <!--<div class="card-reseña">                
+                    <h3>Minecraft</h3>
+                    <div class="card-reseña-img" style="background-image: url('{% static 'core/images/imagenes_resenias/Minecraft/Minecraft-icono.jpg'%}');"></div>
+                    <p>Supervivencia, imaginación y creatividad en estado puro</p>
+                    <a href="pages/resenias/Resenia-Minecraft.html" class="card-reseña-link">Seguir leyendo</a>
+                </div>-->
+        </section>              
+
+    </article>
+</main>
+{%endblock%}

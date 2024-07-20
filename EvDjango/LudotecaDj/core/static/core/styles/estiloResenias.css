@@ -1,0 +1,161 @@
+/* ---------- MAIN ---------- */
+main {
+  background-color: var(--gris-fondo);
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 2;
+  gap: 1%;
+}
+
+/* ARTICLE */
+.article {
+  background-color: var(--blanco);
+  border-radius: 20px;
+  padding: 20px 5%;
+}
+
+h1 {
+  color: var(--naranja);
+  font-size: 2.5em;
+  padding: 20px 0px 10px 0px;
+}
+
+h2 {
+  color: var(--negro-verdoso);
+  font-size: 1.5em;
+}
+
+/* texto */
+.article-text p {
+  margin: 20px 0px;
+  font-size: 1em;
+  text-indent: 1em;
+}
+
+/* imagenes */
+.contenedorImg {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.contenedorImg img {
+  width: auto;
+  height: 200px;
+  /*HACER ESTO PERO RESPONSIVE*/
+
+  border-radius: 10px;
+}
+
+/*nota final*/
+.article-end {
+  margin: 10px 10%;
+  min-height: 200px;
+  padding: 30px;
+
+  background-color: var(--negro-verdoso);
+  border-radius: 20px 20px 100px 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  width: 120px;
+  height: 90px;
+  margin-top: 30px;
+
+  background-color: var(--verde-fuerte);
+  border-radius: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score span {
+  font-size: 1.3em;
+}
+
+.sintesis p {
+  color: var(--naranja);
+  text-indent: 0px;
+}
+
+.article-end h3
+{
+  font-size: 2em;
+  color: var(--naranja);
+  padding-bottom: 20px;
+
+}
+
+/*TARJETAS DE RESEÑAS RECOMENDADAS*/
+.tarjetasReseniasRecomendadas {
+  height: 200px;
+  background-color: crimson;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*ASIDE*/
+.game-info {
+  background-color: var(--naranja);
+  border-radius: 20px;
+  padding: 20px 10px;
+  height: fit-content;
+}
+
+.game-info h4 {
+  font-size: 1.4em;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.game-info ul li {
+  list-style-type: circle;
+  list-style-position: inside;
+  line-height: 1.3em;
+  font-size: 1.1em;
+  padding: 15px 10px 30px 10px;
+  color: var(--negro-verdoso);
+}
+
+
+#reseñasSimilares{
+  background-color: var(--naranja);
+  border-radius: 20px;
+  padding: 1%;
+
+}
+
+.tituloSeccion{
+  color:var(--negro-verdoso);
+  margin: 0 0 0 3%;
+  font-size: 2em;
+}
+.reseñas
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.3fr;
+    padding: 1%;
+    gap: 1%;
+    justify-content: space-around;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* ----- MEDIA QUERIES ---- */
+
+/* 
+NAVBAR 
+  - Reemplazar botones y buscador por un menú hamburguesa
+*/

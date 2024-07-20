@@ -1,0 +1,46 @@
+{% extends "core/base.html"%}
+{%block title%} Buscador Reseñas {%endblock%}
+
+{%load static%}
+
+{%block estilos%}
+<link rel="stylesheet" href= "{% static 'core/styles/estiloBuscadorResenias.css' %}">
+{%endblock%}
+
+{%block content%}
+
+    <main>
+        <section class="main-content">
+            
+            <h1>Reseñas</h1>
+
+            <div class="container-reseñas">
+
+                <!--<div class="flecha"><i class="fa-solid fa-arrow-left"></i></div>-->
+
+                <div class="reseñas">
+                    {% for resenia in resenias%}
+            
+                        <div class="card-reseña">
+                            <h3>{{resenia.titulo}}</h3>
+                            <div class="card-reseña-img" style="background-image: url({{resenia.imagen_caratula.url}})"></div>
+                            <p>{{resenia.subtitulo_1}}</p>
+                            <a href="{% url 'resenia' resenia.id%}" class="card-reseña-link">Seguir leyendo</a>
+                        </div>
+            
+                        
+            
+                    {% endfor %}
+                    
+                    <!--<div class="flecha"><i class="fa-solid fa-arrow-right"></i></div>-->
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+{% endblock %}
